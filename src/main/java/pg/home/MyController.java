@@ -19,7 +19,7 @@ public class MyController {
     @ConfigProperty(name = "custom.config")
     private String customConfig;
 
-    @ConfigProperty(name =  "mycustom.lobby")
+    @ConfigProperty(name =  "mycustom.lobby", defaultValue = "empty")
     private String lobby;
 
     @Path("/pipi")
