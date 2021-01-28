@@ -19,10 +19,14 @@ public class MyController {
     @ConfigProperty(name = "custom.config")
     private String customConfig;
 
+    @ConfigProperty(name =  "mycustom.lobby")
+    private String lobby;
+
     @Path("/pipi")
+    @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getPiPi() {
-        return "PiPi";
+        return String.format("PiPi lobby:[%s]", lobby) ;
     }
 
     @Path("")
